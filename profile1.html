@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container {
+            font-family: "poppins";
+            /* border: 2px solid red; */
+            background-image: radial-gradient(#7295ca, #6081b3, #14191f);
+            padding: 50px;
+            /* text-align: center; */
+        }
+
+        .box {
+            /* border: 2px solid blue; */
+            color: white;
+        }
+
+        .main-box {
+            display: grid;
+            background-color: #20272f;
+            width: 620px;
+        }
+
+        .box1 {
+            margin-bottom: 20px;
+        }
+
+        .head {
+            display: flex;
+            gap: 100px;
+        }
+
+        .settings {
+            color: #b1c3ff;
+            font-size: 23px;
+            margin: auto;
+            text-align: left;
+            cursor: pointer;
+        }
+
+        .done {
+            cursor: pointer;
+            color: #b1c3ff;
+            font-size: 23px;
+            margin: auto;
+            text-align: right;
+        }
+
+        .profile {
+            text-align: center;
+            margin-right: 15px;
+        }
+
+        .picture {
+            background-color: #38485c;
+            border-radius: 75px;
+            height: 130px;
+            width: 130px;
+            text-align: center;
+            margin: auto;
+            cursor: pointer;
+        }
+
+        h1 {
+            padding-top: 45px;
+        }
+
+        .pic-box {
+            margin-left: 20px;
+            color: #b1c3ff;
+        }
+
+        .change {
+            font-size: 19px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .firstname {
+            padding-left: 11px;
+            color: white;
+            border-radius: 10px;
+            margin-bottom: 25px;
+
+        }
+
+        .lastname {
+            padding-left: 11px;
+            color: white;
+            border-radius: 10px;
+            margin-bottom: 25px;
+
+        }
+
+        .username {
+            padding-left: 11px;
+            color: white;
+            border-radius: 10px;
+            margin-bottom: 35px;
+        }
+
+        .email {
+            margin-top: 10px;
+            padding-left: 11px;
+            color: white;
+            border: none;
+            border: 2px solid #979797;
+            border-bottom: none;
+        }
+
+        .contact {
+            margin-top: 30px;
+            display: block;
+        }
+
+        .details {
+            text-align: left;
+            color: #b1c3ff;
+            font-size: 16px;
+            margin-left: 30px;
+        }
+
+        .phone {
+            padding-left: 11px;
+            color: white;
+            border: 2px solid #979797;
+            border-bottom: none;
+        }
+
+        .residential {
+            padding-left: 11px;
+            color: white;
+            border: 2px solid #979797;
+            margin-bottom: 30px;
+        }
+
+        .security {
+            margin-top: 20px;
+            display: block;
+        }
+
+        .setting {
+            text-align: left;
+            color: #b1c3ff;
+            font-size: 16px;
+            margin-left: 30px;
+        }
+
+        .password {
+            margin-top: 10px;
+            padding-left: 11px;
+            color: white;
+            border: 2px solid #979797;
+            border-bottom: none;
+        }
+
+        .reset {
+            padding-left: 11px;
+            color: white;
+            border: 2px solid #979797;
+
+        }
+
+        ::placeholder {
+            color: white;
+        }
+
+        input[type=text]:focus {
+            outline: 4px ridge #b1c3ff;
+        }
+
+        input {
+            display: block;
+            height: 70px;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            border: none;
+            font-size: 20px;
+            background-color: #394452;
+        }
+
+        input:hover {
+            box-shadow: 0px 0px 5px 3px #b1c3ffab;
+            cursor: pointer;
+        }
+
+        hr {
+            height: 2px;
+            border-width: 0;
+            color: #54565e;
+            background-color: #54565e;
+        }
+
+        label {
+            position: relative;
+            display: block;
+            /* padding-right: 76px; */
+            box-sizing: border-box;
+            /* width: 174px; */
+        }
+
+        label::after {
+            content: attr(data-firstname);
+            position: absolute;
+            top: 7px;
+            left: 35px;
+            font-family: arial, helvetica, sans-serif;
+            font-size: 15px;
+            color: #94a8c4;
+            font-weight: bold;
+        }
+
+        @media(min-width:780px) {
+            .main-box {
+                margin: auto;
+                padding: none;
+                width: 990px;
+            }
+
+            .box1 {
+                grid-row: 1/5;
+                grid-column: 1/7;
+            }
+
+            label::after {
+                left: 100px;
+            }
+
+            .settings {
+                font-size: 27px;
+            }
+
+            .done {
+                font-size: 27px;
+            }
+
+            .profile {
+                font-size: 27px;
+            }
+.security{
+    margin-bottom: 20px;
+}
+            .head {
+                width: 970px;
+                text-align: center;
+                margin: auto;
+                margin-top: 25px;
+            }
+
+            .details {
+                margin-left: 90px;
+            }
+
+            .setting {
+                margin-left: 90px;
+            }
+
+            .box {
+                display: block;
+            }
+
+            input {
+                width: 800px;
+                height: 90px;
+            }
+
+            .picture {
+                border-radius: 90px;
+                height: 170px;
+                width: 170px;
+            }
+
+            h1 {
+                padding-top: 65px;
+                font-size: 37px;
+            }
+
+            .change {
+                font-size: 21px;
+                margin-bottom: 50px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="main-box">
+            <div class="box box1">
+                <div class="head">
+                    <p class="settings"> &#60;&#60; Settings </p>
+                    <h2 class="profile">Profile</h2>
+                    <p class="done" name="done">Done &gt;&gt;</p>
+                </div>
+                <div class="pic-box">
+                    <div class="picture">
+                        <h1>DP</h1>
+                    </div>
+                    <p class="change">Change profile picture</p>
+                </div>
+                <div class="name">
+                    <label data-firstname="First name">
+                        <input type="text" class="firstname" placeholder="First name">
+                    </label>
+                    <label data-firstname="Last name">
+                        <input type="text" class="lastname" placeholder="Last name">
+                    </label>
+                    <label data-firstname="User name">
+                        <input type="text" class="username" placeholder="User name">
+                    </label>
+                </div>
+                <hr>
+                <div class="contact">
+                    <label class="details link">Contact Details</label>
+                    <input type="text" class="email" placeholder="Email address">
+                    <input type="text" class="phone" placeholder="Phone number">
+                    <input type="text" class="residential" placeholder="Residential address">
+                </div>
+                <hr>
+                <div class="security">
+                    <label class="setting link">Security Settings</label>
+                    <input type="text" class="password" placeholder="Password">
+                    <input type="text" class="reset" placeholder="Password reset">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
